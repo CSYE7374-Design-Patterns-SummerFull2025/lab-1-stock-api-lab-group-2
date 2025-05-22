@@ -1,22 +1,30 @@
 package edu.neu.csye7374.models;
-import edu.neu.csye7374.interfaces.Tradable;
 
-public class IBM extends StockSuperClass implements Tradable {
+public class IBM extends StockSuperClass {
     public IBM() {
+        super();
         this.name = "IBM";
         this.price = 140.0;
-        this.description = "IBM is a multinational technology and consulting company.";
+        this.description = "IBM: Technology and consulting."; 
+    }
+
+    public IBM(String name, double price, String description) {
+        super(name, price, description);
     }
     
     @Override
     public void setBid(String bid) {
-        // Implementation for setting a bid
-        System.out.println("Bid placed for IBM: " + bid);
+        System.out.println("Bid placed for IBM: " + bid + ". Current price: " + this.price);
     }
+
     @Override
     public String getMetric() {
-        // Implementation for getting a metric
-        return "IBM Metric: Positive performance index.";
+        if (this.price > 130) {
+            return "Positive";
+        }
+        else{
+            return "Negative";
+        }
     }
     
 }

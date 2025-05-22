@@ -1,6 +1,11 @@
 package edu.neu.csye7374.interfaces;
 
 public interface Tradable {
+    String getName();
+    double getPrice(); 
+    void setPrice(double price); 
+    String getDescription(); 
+
     /**
      * place a bid to buy a stock
      * 

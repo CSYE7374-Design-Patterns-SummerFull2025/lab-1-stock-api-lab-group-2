@@ -8,12 +8,12 @@ package edu.neu.csye7374;
 
 public class Driver {
 	public static void main(String[] args) {
-		System.out.println("============Main Execution Start===================\n\n");
+		System.out.println("============Main Execution Start===================\\n\\n");
 
-         //Add your code in between these two print statements
-		
+        Demo demo = new Demo();
+        demo.runDemo();
 		 
-		System.out.println("\n\n============Main Execution End===================");
+		System.out.println("\\n\\n============Main Execution End===================\\");
 	}
 
 }
